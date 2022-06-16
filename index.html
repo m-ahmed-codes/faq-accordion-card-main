@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <title>faq-accordion-card-main</title>
+    <style>
+        /*       CSS reset     */
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Kumbh Sans', sans-serif;
+            /* background-color: ; */
+            /* background: #bdc3c7;  fallback for old browsers */
+            
+        }
+        .bg-gradient-color{
+            
+            background: -webkit-linear-gradient(to bottom, #af67e9,#6565e7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #af67e9,#6565e7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .round{
+            border-radius: 35px;
+        }
+        .women-img{
+            left: 155px ;
+            overflow: hidden;
+        }
+        .bg-patter{
+            /* background-image: url(./images/bg-pattern-desktop.svg);
+            background-repeat: no-repeat */
+
+            /* background-position: inherit; */
+           
+  top: 138px;
+  width: 30rem;
+  left: 100px;
+            
+            /* z-index: 0;   */
+        }
+        
+        .inside-women-img{
+            background: url(./images/illustration-woman-online-desktop.svg);
+            background-repeat: no-repeat;
+            background-position: -4rem;
+            height: 30rem;
+        }
+        .para-color{
+            color: hsl(240, 6%, 50%);
+        }
+        .hover-effect:hover{
+            color: hsl(14, 88%, 65%);
+            cursor: pointer;
+        
+        }
+        .para-bold{
+            font-weight: bold   ;
+        }
+        .box{
+            position: absolute;
+            bottom: 3rem; 
+            left: 3rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .inside-women-img{
+                background-image: url(./images/illustration-woman-online-mobile.svg);
+                background-position: 50%;
+                height: 18rem;
+                /* position: relative; */
+
+            }
+            .bg-patter{
+                background: url(./images/bg-pattern-mobile.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                
+            }
+            .hide img{
+                display: none;
+            }
+            .box{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 770px){
+            .inside-women-img{
+                background-image: url(./images/illustration-woman-online-mobile.svg);
+                background-position: 50%;
+                height: 14rem;
+                /* position: relative; */
+
+            }
+
+        }
+        @media screen and (max-width: 480px){
+            .inside-women-img{
+                background-image: url(./images/illustration-woman-online-mobile.svg);
+                background-position: 50%;
+                height: 12rem;
+                /* position: relative; */
+
+            }
+
+        }
+         
+
+    </style>
+</head>
+<body>
+    <section class="bg-gradient-color py-5">
+        <div class="container py-5">
+            <div class="row py-5 justify-content-center">
+                <div class="col-lg-10 col-10  bg-light round ">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 inside-women-img">
+                            <img class="img-fluid box" src="./images/illustration-box-desktop.svg" alt="">
+                            <div class=" hide ">
+                                <img class="img-fluid bg-patter  position-absolute  " src="./images/bg-pattern-desktop.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 p-5">   
+                            <h3 class="pb-4 text-center text-lg-start">FAQ</h3>
+                            <div id="btn1">
+                                <p class="d-inline hover-effect para-color text-start " >How many team member can I invite?   </p>
+                                <span class="float-end" >
+                                    <img class="mb-1 d-inline" src="./images/icon-arrow-down.svg" alt="">
+                                </span>
+                            </div>
+                                <p class="para-color pt-3 " id="hideShowtxt1">  You can invite up to 2 additional users on the Free plan. There is no limit on 
+                                    team members for the Premium plan.</p>  
+                                <hr class="hsl(240, 5%, 91%)">
+                            <div id="btn2">
+                                <p class="d-inline hover-effect para-color text-start">  What is the maximum file upload size?</p>
+                                <span class="float-end">
+                                    <img class="mb-1 d-inline" src="./images/icon-arrow-down.svg" alt="">
+                                </span>
+                            </div>
+                                <p class="para-color pt-3" id="hideShowtxt2">No more than 2GB. All files in your account must fit your allotted storage space.</p>  
+                                
+                            <hr class="hsl(240, 5%, 91%)">
+                            <div id="btn3">
+                                <p class="d-inline hover-effect para-color text-start">  How do I reset my password?</p>
+                                <span class="float-end">
+                                    <img class="mb-1 d-inline" src="./images/icon-arrow-down.svg" alt="">
+                                </span>
+                            </div>
+                                <p class="para-color pt-3 " id="hideShowtxt3">Click “Forgot password” from the login page or “Change password” from your profile page.
+                                    A reset link will be emailed to you.</p>  
+                            <hr class="hsl(240, 5%, 91%)">
+
+                            <div id="btn4">
+                                <p class="d-inline hover-effect para-color text-start">Can I cancel my subscription? </p>
+                                <span class="float-end">
+                                    <img class="mb-1 d-inline" src="./images/icon-arrow-down.svg" alt="">
+                                </span>
+                            </div>
+
+                                <p class="para-color pt-3" id="hideShowtxt4"> Yes! Send us a message and we’ll process your request no questions asked.</p>  
+                            <hr class="hsl(240, 5%, 91%)">
+                            <div id="btn5">
+                                   <p class="d-inline hover-effect para-color text-start">  Do you provide additional support?</p>
+                                    <span class="float-end">
+                                        <img class="mb-1 d-inline" src="./images/icon-arrow-down.svg" alt="">
+                                    </span>
+                            </div>
+                                    <p class="para-color pt-3 " id="hideShowtxt5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let btn1 = document.querySelector('#btn1')
+        let btn2 = document.querySelector('#btn2')
+        let btn3 = document.querySelector('#btn3')
+        let btn4 = document.querySelector('#btn4')
+        let btn5 = document.querySelector('#btn5')
+        let hideShowtxt1 = document.querySelector('#hideShowtxt1')
+        let hideShowtxt2 = document.querySelector('#hideShowtxt2')
+        let hideShowtxt3 = document.querySelector('#hideShowtxt3')
+        let hideShowtxt4 = document.querySelector('#hideShowtxt4')
+        let hideShowtxt5 = document.querySelector('#hideShowtxt5')
+        let paraBold = document.querySelectorAll('p')
+
+        AllParaHide()
+
+
+
+        console.log(paraBold)
+        btn1.addEventListener('click',()=>{
+            if (btn1.innerText !== '' ) {
+                removeBold()
+                AllParaHide()
+                hideShowtxt1.style.display = 'block'
+                btn1.firstElementChild.classList.add('para-bold')
+                btn1.firstElementChild.classList.remove('para-color')
+            }
+        })
+
+        btn2.addEventListener('click',()=>{
+            if (btn2.innerText !== '' ) {
+                removeBold()
+                AllParaHide()
+                hideShowtxt2.style.display = 'block'
+                btn2.firstElementChild.classList.add('para-bold')
+                btn2.firstElementChild.classList.remove('para-color')
+            }
+        })
+        btn3.addEventListener('click',()=>{
+            if (btn3.innerText !== '' ) {
+                removeBold()
+                AllParaHide()
+                hideShowtxt3.style.display = 'block'
+                btn3.firstElementChild.classList.add('para-bold')
+                btn3.firstElementChild.classList.remove('para-color')
+            }
+        })
+
+        btn4.addEventListener('click',()=>{
+            if (btn4.innerText !== '' ) {
+                removeBold()
+                AllParaHide()
+                hideShowtxt4.style.display = 'block'
+                btn4.firstElementChild.classList.add('para-bold')
+                btn4.firstElementChild.classList.remove('para-color')
+            }
+        })
+        btn5.addEventListener('click',()=>{
+            if (btn5.innerText !== '' ) {
+                removeBold() 
+                AllParaHide()
+                hideShowtxt5.style.display = 'block'
+                btn5.firstElementChild.classList.add('para-bold')
+                btn5.firstElementChild.classList.remove('para-color')
+            }
+        })
+
+
+        function removeBold(){
+            btn1.firstElementChild.classList.remove('para-bold')
+            btn1.firstElementChild.classList.add('para-color')
+            btn2.firstElementChild.classList.remove('para-bold')
+            btn2.firstElementChild.classList.add('para-color')
+            btn3.firstElementChild.classList.remove('para-bold')
+            btn3.firstElementChild.classList.add('para-color')
+            btn4.firstElementChild.classList.remove('para-bold')
+            btn4.firstElementChild.classList.add('para-color')
+            btn5.firstElementChild.classList.remove('para-bold')
+            btn5.firstElementChild.classList.add('para-color')
+
+        }
+        
+
+
+        function AllParaHide(){
+            hideShowtxt1.style.display = 'none'
+            hideShowtxt2.style.display = 'none'
+            hideShowtxt3.style.display = 'none'
+            hideShowtxt4.style.display = 'none'
+            hideShowtxt5.style.display = 'none'
+        }
+    </script>
+
+</body>
+</html>
